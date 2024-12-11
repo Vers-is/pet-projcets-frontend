@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Credit Card</title>
+</head>
+<body>
+    
+    <main>
+
+        <div class="main_credit-card">
+            <div class="card-wrapper1">
+                <div class="card-icon1"></div>
+                <div class="card-icon2"></div>
+            </div>
+            <div class="card-wrapper2">
+                <div class="card-number">####</div>
+                <div class="card-number">####</div>
+                <div class="card-number">####</div>
+                <div class="card-number">####</div>
+            </div>
+            <div class="card-wrapper1">
+                <div class="card_sub-wrapper">
+                    <div class="sub-wrapper_item1">Card Holder</div>
+                    <div class="sub-wrapper_item2">FULL NAME</div>
+                </div>
+                <div class="card_sub-wrapper">
+                    <div class="sub-wrapper_item1">Expires</div>
+                    <div class="sub-wrapper_item2">MM/YY</div>
+                </div>
+            </div>
+        </div>
+        
+        <form>
+            <div class="form_item">
+                <label for="name">Card Number</label>
+                <input 
+                    type="text" 
+                    pattern="\d{16}" 
+                    id="card-number" 
+                    placeholder="#### #### #### ####" 
+                    title="Card number can't be less than 16"
+                required>
+            </div>
+
+            <div class="form_item">
+                <label for="name">Card Holders</label>
+                <input 
+                    type="text" 
+                    pattern="^[A-Za-z]+ [A-Za-z]+$" 
+                    id="card-name" 
+                    title="Enter your first and last name"
+                    required>
+            </div>
+
+            <div class="form_wrapper">
+                <div class="form_item">
+                    <label for="card-month">Expiration Date</label>
+                    <div class="input-container">
+                        <input 
+                            type="number" 
+                            min="1" 
+                            max="12" 
+                            id="card-month" 
+                            placeholder="Month" 
+                            title="Numbers from 1 to 12"
+                            required>
+                        <input 
+                        type="number" 
+                        min="1990" 
+                        max="2025" 
+                        id="card-year" 
+                        placeholder="Year"
+                        title="You can only choose from 1990 till current year"
+                        required>
+                    </div>
+                </div> 
+                
+                <div class="form_item">
+                    <label for="name">CVV</label>
+                    <input 
+                        type="text" 
+                        pattern="\d{3,4}" 
+                        id="card-cvv" 
+                        placeholder="###" 
+                        title="3 or 4 numbers required"
+                        required>
+                </div>
+            </div> <!-- end of wrapper-->
+
+            <button class="form_button" type="submit">Submit</button>
+        </form>
+        
+        
+    </main>
+
+</body>
+</html>
