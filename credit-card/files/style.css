@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+* {
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+
 body, main{
     justify-content: center;
     display: flex;
     align-items: center;
-    box-sizing: border-box;
 }
 
 .card-icon1, .card-icon2, .main_credit-card, body {
@@ -43,7 +48,7 @@ main {
 .main_credit-card {
     font-family: monospace;
     color: white;
-    background-image: url('/credit-card/images/back4.jpg');
+    background-image: url('/credit-card/images/back5.jpg');
     position: absolute;
     height: 31vh;
     width: 80%;
@@ -57,6 +62,10 @@ main {
     box-sizing: border-box;
 }
 
+.card-wrapper1, .card-wrapper2 {
+    text-shadow: 2px 2px 4px rgba(33, 29, 58, 0.852);
+}
+
 .card-wrapper1 {
     display: flex;
     justify-content: space-between;
@@ -67,6 +76,13 @@ main {
     display: flex;
     justify-content: space-around;
     width: 100%;
+}
+
+.card-focused {
+    background-color: rgba(253, 253, 253, 0.317);
+    border: 1.5px solid white;
+    border-radius: 15px;
+    padding: 0 5px;
 }
 
 .sub-wrapper_item2 {
@@ -100,20 +116,18 @@ label {
     font-weight: 400;
 }
 
-input {
+input, select {
     border-radius: 5px;   
     border: solid 1px rgba(185, 185, 199, 0.463);
     padding: 10px;
     width: 100%;
-    box-sizing: border-box;
     font-size: 12px;
     color: var(--black);
     font-weight: 500;
     letter-spacing: 1px;
-    transition: 0.3s all ease;
 }
 
-input:focus {
+input:focus, select:focus {
     outline: none;
     border: solid  1px var(--blue);
     box-shadow: 0px 1.5px 2px rgba(185, 185, 199, 0.463);
@@ -152,7 +166,6 @@ form {
     color: white;
     box-shadow: 0px 2px 5px var(--blue);
     background-color: var(--blue);
-    transition: 0.3s all ease;
     box-sizing: border-box;
 }
 .form_button:hover {

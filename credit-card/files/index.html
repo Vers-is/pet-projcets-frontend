@@ -16,18 +16,18 @@
                 <div class="card-icon1"></div>
                 <div class="card-icon2"></div>
             </div>
-            <div class="card-wrapper2">
+            <div class="card-wrapper2" id="card-number-field">
                 <div class="card-number">####</div>
                 <div class="card-number">####</div>
                 <div class="card-number">####</div>
                 <div class="card-number">####</div>
             </div>
             <div class="card-wrapper1">
-                <div class="card_sub-wrapper">
+                <div class="card_sub-wrapper" id="card-name-field">
                     <div class="sub-wrapper_item1">Card Holder</div>
                     <div class="sub-wrapper_item2">FULL NAME</div>
                 </div>
-                <div class="card_sub-wrapper">
+                <div class="card_sub-wrapper" id="card-expiry-field">
                     <div class="sub-wrapper_item1">Expires</div>
                     <div class="sub-wrapper_item2">MM/YY</div>
                 </div>
@@ -60,22 +60,12 @@
                 <div class="form_item">
                     <label for="card-month">Expiration Date</label>
                     <div class="input-container">
-                        <input 
-                            type="number" 
-                            min="1" 
-                            max="12" 
-                            id="card-month" 
-                            placeholder="Month" 
-                            title="Numbers from 1 to 12"
-                            required>
-                        <input 
-                        type="number" 
-                        min="1990" 
-                        max="2025" 
-                        id="card-year" 
-                        placeholder="Year"
-                        title="You can only choose from 1990 till current year"
-                        required>
+                        <select id="card-month" required>
+                            <option value="" disabled selected>Month</option>
+                        </select>
+                        <select id="card-year" required>
+                            <option value="" disabled selected>Year</option>
+                        </select>
                     </div>
                 </div> 
                 
